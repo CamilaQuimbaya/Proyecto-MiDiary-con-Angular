@@ -1,0 +1,31 @@
+<app-dashboard titulo="Tu día a día"></app-dashboard>
+
+<div class=" text-white daily-content">
+    <div class="add">
+        <button routerLink="/añadir-Daily" class="text-white fw-bold">
+            <i class="fa-solid fa-location-arrow"></i>
+            <span>Añadir daily</span>
+        </button>
+    </div>
+    <div class="d-flex" *ngIf="listaDailies.length > 0">
+    <div class="box" *ngFor="let daily_data of listaDailies" >
+        <div class="content">
+            <ul >
+                <li class="fecha-h"><h5>{{daily_data.fecha}}</h5></li>
+                <li><h5>{{daily_data.titulo}}</h5></li>
+                <li> <h5>{{daily_data.descripcion}}</h5></li>
+                <li><h5>{{daily_data.nota}}</h5></li>
+                <div class="d-flex justify-content-start  px-4 ">
+                    <i class="fa-solid fa-pen-to-square px-2 edit" [routerLink]="['/editar-Daily', daily_data._id]"></i>
+                    <i class="fa-solid fa-trash-can trash" (click)="eliminarDaily(daily_data._id)"></i>
+                </div>
+
+            </ul>
+
+        </div>
+      </div>
+
+
+    </div>
+    <h2 class="fw-bold fs-1 text-light text-center" *ngIf="listaDailies.length === 0">No hay datos registrados</h2>
+</div>

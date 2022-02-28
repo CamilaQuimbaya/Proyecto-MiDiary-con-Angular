@@ -1,0 +1,49 @@
+header{
+    position:absolute;
+    top:0;
+    right: 20px;
+    width: 1130px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.24);
+    box-shadow:0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+header .logo{
+   width: 60px;
+}
+header ul{
+    display: flex;
+    padding-right: 70px;
+    padding-top: 20px;
+}
+header ul li{
+    list-style: none;
+
+
+}
+header ul li a{
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 25px;
+}
+header ul li a:hover{
+    --glow-color: rgb(253, 237, 251);
+    --glow-spread-color: rgba(191, 123, 255, 0.781);
+    --enhanced-glow-color: rgb(252, 228, 248);
+    --btn-color: rgb(255, 130, 238);
+    color: var(--btn-color);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+           transform: translateY(-7px);
+}

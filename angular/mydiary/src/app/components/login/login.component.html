@@ -1,0 +1,32 @@
+<section>
+    <div class="box">
+        <div class="container-log">
+            <div class="form">
+                <h2>Hola te extrañamos!</h2>
+                <form [formGroup]="loginForm" (ngSubmit)="accessoUsuario()">
+                    <div class="inputBox">
+                        <input type="email" formControlName="user" placeholder="email">
+                        <p class="fw-bold text-danger w-100 text-center pt-2" *ngIf="loginForm.get('user')?.hasError('required') && loginForm.get('user')?.touched">
+                            El correo es obligatorio
+                        </p>
+                        <p class="fw-bold text-danger w-100 text-center pt-2" *ngIf="loginForm.get('user')?.hasError('pattern')">
+                            El correo no es valido
+                        </p>
+                    </div>
+                    <div class="inputBox">
+                        <input type="password" formControlName="pass"  placeholder="password">
+                        <p class="fw-bold text-danger w-100 text-center pt-2" *ngIf="loginForm.get('pass')?.hasError('required') && loginForm.get('pass')?.touched">
+                            La contraseña es requerida
+                        </p>
+                    </div>
+                    <div class="inputBox">
+                        <button class="login-buton" type="submit" [disabled]="loginForm.invalid">
+                            <span>Ingresar</span>
+                        </button>
+                    </div>
+                    <p class="forget">Forgot password?</p>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>

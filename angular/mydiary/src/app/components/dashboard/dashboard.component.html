@@ -1,0 +1,50 @@
+<main>
+    <section class="glass">
+        <div class="row">
+            <div class="col-2 d-flex justify-content-around align-items-center flex-column dh-dash">
+                <div  class="align-items-center justify-content-around py-3">
+                    <h3 class="py-3 text-white fw-bold">My Diary</h3>
+                    <img src="assets/img/twincat.gif" alt="" width="100px">
+                    <li><button class="px-3 fw-bold fs-6">
+                        <i class="fa-brands fa-jedi-order"></i>
+                        <span>Silver</span>
+                    </button></li>
+
+                </div>
+
+
+                <div class="links">
+                    <ul>
+                        <li routerLink="/daily"><button>
+                            <i class="fa-solid fa-feather-pointed"></i>
+                            <span>Daily</span>
+                        </button></li>
+                        <!-- <li (click)="en_contruccion()" ><button>
+                            <i class="fa-brands fa-bilibili"></i>
+                            <span>pensamientos</span>
+                        </button></li> -->
+                        <li routerLink="/amigos"><button>
+                            <i class="fa-regular fa-face-grin-tongue"></i>
+                            <span>Mis amigos</span>
+                        </button></li>
+                        <!-- <li (click)="en_contruccion()"><button>
+                            <i class="fa-regular fa-heart"></i>
+                            <span>Crush</span>
+                        </button></li> -->
+                        <li (click)="en_contruccion()"><button>
+                            <i class="fa-brands fa-itch-io"></i>
+                            <span>pendientes</span>
+                        </button></li>
+                        <li (click)="en_contruccion()"><button>
+                            <i class="fa-brands fa-fly"></i>
+                            <span>recuerdos</span>
+                        </button></li>
+                    </ul>
+                    </div>
+            </div>
+            </div>
+
+    </section>
+
+</main>
+<app-navbar titulo="{{titulo}}"></app-navbar>

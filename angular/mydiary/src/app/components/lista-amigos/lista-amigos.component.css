@@ -1,0 +1,206 @@
+.amigos-content{
+    position: absolute;
+    top: 15%;
+    left: 20%;
+}
+
+/* From cssbuttons.io by @Tiagoadag */
+/* From cssbuttons.io by @Codewithvinay */
+h5{
+    font-size: 12px;
+    padding-top: 20px;
+    padding-right: 30px;
+}
+.fecha-h{
+    margin-top: 8px;
+}
+.box {
+    position: relative;
+    width: 220px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+    z-index: 1;
+
+   }
+
+   .box::before {
+    content: ' ';
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 50%;
+    height: 100%;
+    text-decoration: none;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+
+   }
+
+   .box::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    border-radius: 8px;
+    transform: skewX(15deg);
+    transition: 0.5s;
+    filter: blur(30px);
+
+
+   }
+
+   .box:hover:before,
+   .box:hover:after {
+    transform: skewX(0deg) scaleX(1.3);
+   }
+
+   .box:before,
+   .box:after {
+    background: linear-gradient(315deg, #6303ff, #04a1fc)
+   }
+
+   .box span {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 5;
+    pointer-events: none;
+   }
+
+   .box span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.1s;
+    animation: animate 2s ease-in-out infinite;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+
+   }
+
+   .box span::before {
+    top: -40px;
+    left: 40px;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+   }
+
+   .box span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 0.5s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    animation-delay: -1s;
+
+   }
+
+   .box span:after {
+    bottom: -40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    opacity: 1;
+
+   }
+
+   .box .content {
+    position: relative;
+    width: 190px;
+    height: 254px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 1;
+    transform: 0.5s;
+    color: #fff;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+
+
+   }
+
+   .box .content h2 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 10px;
+   }
+.content ul li{
+    list-style: none;
+    text-align: center;
+    padding-top: 12px;
+    margin-right: 30px ;
+
+}
+.trash:hover{
+    color: rgb(255, 253, 149);
+}
+.edit:hover{
+    color: rgb(0, 225, 255);
+}
+button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #01c4ff;
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+   }
+
+   button i {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+   }
+
+   button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+   }
+
+   button:hover i {
+    transform: translateX(5px) rotate(90deg);
+   }
+
+   button:hover span {
+    transform: translateX(7px);
+
+   }
+   .add{
+
+    padding-left: 930px;
+
+   }

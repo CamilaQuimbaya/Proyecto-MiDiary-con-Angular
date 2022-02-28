@@ -1,0 +1,31 @@
+<app-dashboard titulo="Amigos"></app-dashboard>
+
+<div class=" text-white amigos-content">
+    <div class="add">
+        <button routerLink="/crear-amigo" class="text-white fw-bold">
+            <i class="fa-solid fa-user-plus"></i>
+            <span>Add Amigo</span>
+        </button>
+    </div>
+
+    <div class="d-flex" *ngIf="listaAmigos.length > 0">
+    <div class="box" *ngFor="let data_amigos of listaAmigos" >
+        <div class="content">
+            <ul >
+                <li class="fecha-h"><h5>{{data_amigos.nombre}}</h5></li>
+                <li><h5>{{data_amigos.correo}}</h5></li>
+                <li> <h5>{{data_amigos.telefono}}</h5></li>
+                <div class="d-flex justify-content-start  px-4 ">
+                    <i class="fa-solid fa-pen-to-square px-2 edit"  [routerLink]="['/editar-amigo', data_amigos._id]"></i>
+                    <i class="fa-solid fa-trash-can trash" (click)="eliminarAmigo(data_amigos._id)"></i>
+                </div>
+
+            </ul>
+
+        </div>
+      </div>
+
+
+    </div>
+    <h2 class="fw-bold fs-1 text-light text-center" *ngIf="listaAmigos.length === 0">No hay datos registrados</h2>
+</div>

@@ -1,0 +1,90 @@
+*{
+ margin: 0;
+ padding:0;
+ box-sizing: border-box;
+
+}
+
+main{
+    min-height: 100vh;
+    background-image: url('https://i.pinimg.com/originals/61/8f/08/618f083c61a7460ce0a6064319af41bd.gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+
+}
+li{
+    list-style: none;
+}
+li:hover{
+    --glow-color: rgba(253, 237, 251, 0.295);
+    --glow-spread-color: rgba(191, 123, 255, 0.404);
+    --enhanced-glow-color: rgba(252, 228, 248, 0.37);
+    --btn-color: rgba(255, 130, 238, 0.692);
+    color: rgba(61, 3, 49, 0.993);
+    background-color: var(--glow-color);
+    box-shadow: 0 0 1em .25em var(--glow-color),
+           0 0 4em 2em var(--glow-spread-color),
+           inset 0 0 .75em .25em var(--glow-color);
+    border-radius: 30px;
+}
+.glass{
+    position:absolute;
+    min-height: 85vh;
+    width:98%;
+    top:80px;
+
+    background: rgba(255, 255, 255, 0.171);
+    box-shadow:0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+.dh-dash{
+    background: rgba(255, 4, 171, 0.205);
+    box-shadow:0 15px 35px rgba(0, 0, 0, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    min-height:85vh ;
+}
+/* From cssbuttons.io by @adamgiebl */
+button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 13px;
+    padding: 0.8em 1.3em 0.8em 0.9em;
+    color: white;
+    background: #ad538900;
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+   }
+
+   button i {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+   }
+
+   button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+   }
+
+   button:hover i {
+    transform: translateX(5px) rotate(90deg);
+   }
+
+   button:hover span {
+    transform: translateX(7px);
+
+   }

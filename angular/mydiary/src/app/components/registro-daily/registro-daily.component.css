@@ -1,0 +1,89 @@
+.container-form{
+    position: absolute;
+    top: 20%;
+    left: 30%;
+}
+
+
+
+
+.container-log{
+    position: relative;
+    width: 600px;
+    min-height: 500px;
+    background: rgba(255, 2, 221, 0.151);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(255, 255, 255,0.5);
+    border-right: 1px solid rgba(255, 255, 255,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255,0.2);
+}
+
+
+.form .inputBox{
+    width: 100%;
+    margin-top: 20px;
+}
+input{
+    width: 80%;
+    background: rgba(255, 255, 255,0.2);
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid rgba(255, 255, 255,0.5);
+    border-right: 1px solid rgba(255, 255, 255,0.2);
+    border-bottom: 1px solid rgba(255, 255, 255,0.2);
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(255, 255, 255,0.5);
+}
+
+input[type="submit"]{
+    background: #fff;
+    color: rgba(102, 102, 102, 0.822);
+    cursor:pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+
+}
+
+
+button {
+    display: flex;
+    align-items: center;
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 15px;
+    padding: 0.8em 1.3em 1em 0.9em;
+    color: white;
+    background: #03cdff;
+    border: none;
+    letter-spacing: 0.05em;
+    border-radius: 16px;
+   }
+
+   button i {
+    margin-right: 3px;
+    transform: rotate(30deg);
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+   }
+
+   button span {
+    transition: transform 0.5s cubic-bezier(0.76, 0, 0.24, 1);
+   }
+
+   button:hover i {
+    transform: translateX(5px) rotate(90deg);
+
+   }
+
+   button:hover span {
+    transform: translateX(7px);
+
+
+   }

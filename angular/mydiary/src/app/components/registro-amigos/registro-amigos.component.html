@@ -1,0 +1,36 @@
+<app-dashboard titulo="crear amigo"></app-dashboard>
+
+<div class="container-form">
+<form class="row g-4 container-log text-center" [formGroup]="amigoForm" (ngSubmit)="infoAmigo()">
+     <h1 class="text-light fs-3 text-center fw-bold">crear</h1>
+    <div class="row justify-content-center">
+      <label for="nombre" class="form-label text-light">nombre</label>
+      <input type="text" formControlName="nombre" class="form-control" >
+      <p class="fw-bold text-danger" *ngIf="amigoForm.get('nombre')?.hasError('required') && amigoForm.get('nombre')?.touched">campo requerido</p>
+        </div>
+    <div class="row justify-content-center">
+      <label for="correo" class="form-label text-light">correo</label>
+      <input type="text" formControlName="correo" class="form-control" >
+      <p class="fw-bold text-danger w-100 text-center pt-2" *ngIf="amigoForm.get('correo')?.hasError('required') && amigoForm.get('correo')?.touched">
+        El correo es obligatorio
+    </p>
+    <p class="fw-bold text-danger w-100 text-center pt-2" *ngIf="amigoForm.get('correo')?.hasError('pattern')">
+        El correo no es valido
+    </p>
+    </div>
+    <div class="row justify-content-center">
+      <label for="telefono" class="form-label text-light">telefono</label>
+      <input type="text" formControlName="telefono" class="form-control">
+      <p class="fw-bold text-danger" *ngIf="amigoForm.get('telefono')?.hasError('required') && amigoForm.get('telefono')?.touched">Se necesita el numero de telefono</p>
+      <p class="fw-bold text-danger" *ngIf="amigoForm.get('telefono')?.hasError('pattern')">El telefono no es valido, debe de ser un numero</p>
+    </div>
+
+
+
+    <div class="col-12">
+      <button type="submit"><i class="fa-solid fa-location-arrow "></i>
+        <span>Añadir</span></button>
+    </div>
+  </form>
+</div>
+
